@@ -58,14 +58,14 @@ input {
 
 .form div {
       margin-bottom: 20px;
-      /* Adjust margin */
+
 }
 
 .forgot {
       text-align: end;
       font-size: 13px;
       padding-bottom: 20px;
-      /* Adjust padding */
+
 }
 
 .logo {
@@ -80,7 +80,7 @@ img {
       height: 30px;
 }
 
-/* Media Queries for responsiveness */
+
 @media screen and (max-width: 600px) {
       .card {
             margin: 0 auto;

@@ -75,7 +75,7 @@ function DataUpload() {
                               <table>
                                     <thead>
                                           <tr className='heading'>
-                                                <th style={{ display: 'flex' }}> <span> <RiExpandUpDownFill /></span>College Name</th>
+                                                <th style={{ display: 'flex', paddingTop: "20px" }}> <span> <RiExpandUpDownFill /></span>College Name</th>
                                                 <th>Students</th>
                                                 <th></th>
                                                 <th></th>

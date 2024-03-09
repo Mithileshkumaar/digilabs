@@ -23,8 +23,8 @@ function Login() {
 
       function handleSubmit() {
             if (validate()) {
-                  // Form is valid, navigate to another page
-                  navigate('/eventmanagement'); // Replace '/another-page' with the desired URL
+
+                  navigate('/eventmanagement');
             }
       }
 

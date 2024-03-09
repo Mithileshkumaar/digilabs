@@ -6,7 +6,7 @@
       padding-top: 20px;
       position: relative;
       overflow-x: hidden;
-      /* Ensure horizontal overflow is hidden on smaller screens */
+
 }
 
 .items {
@@ -27,15 +27,15 @@ a {
       text-decoration: none;
 }
 
-/* Media Queries */
+
 @media only screen and (max-width: 768px) {
       .sidebar {
             width: 200px;
-            /* Adjust width for smaller screens */
+
       }
 
       .items {
             padding: 15px 20px;
-            /* Adjust padding for smaller screens */
+
       }
 }
