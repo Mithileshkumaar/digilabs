@@ -1,0 +1,55 @@
+.content {
+      display: flex;
+      width: 100%;
+      flex-wrap: nowrap;
+}
+
+.eventmanagement-content {
+      margin: 20px 20px;
+      text-align: center;
+      width: 100%;
+}
+
+.heading {
+      background-color: #DDE2EB;
+      color: #545454;
+
+}
+
+.heading button {
+      margin: 10px 10px;
+}
+
+th {
+      color: black;
+      text-align: center;
+      padding: 0px 24px;
+
+}
+
+table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #262626;
+      box-shadow: 1px 1px 5px 1px rgb(162, 163, 163);
+
+}
+
+tr {
+      background-color: #fff;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+      .eventmanagement-content {
+            margin: 10px;
+            /* Adjust margin for smaller screens */
+      }
+
+      th,
+      td {
+            padding: 5px;
+            /* Adjust padding for table cells on smaller screens */
+      }
+}

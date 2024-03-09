@@ -1,0 +1,51 @@
+.content {
+      display: flex;
+}
+
+.dataupload-content {
+      margin: 20px 20px;
+      text-align: center;
+      width: 100%;
+}
+
+
+
+th {
+      color: black;
+      text-align: start;
+      padding: 20px;
+
+}
+
+tr {
+      background-color: #fff;
+      text-align: start;
+
+
+}
+
+.heading {
+      background-color: #DDE2EB;
+      color: #545454;
+      padding: 20px;
+}
+
+.heading button {
+      margin: 10px 10px;
+}
+
+td {
+      padding: 5px 34px;
+
+
+}
+
+table {
+      box-shadow: 1px 1px 5px 1px rgb(162, 163, 163);
+}
+
+.modal {
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+}

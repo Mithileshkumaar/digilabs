@@ -1,0 +1,41 @@
+.sidebar {
+      background-color: #041235;
+      height: 100vh;
+      width: 280px;
+      color: white;
+      padding-top: 20px;
+      position: relative;
+      overflow-x: hidden;
+      /* Ensure horizontal overflow is hidden on smaller screens */
+}
+
+.items {
+      padding: 20px 30px;
+}
+
+li:hover {
+      background-color: #274C70;
+
+}
+
+li {
+      list-style: none;
+}
+
+a {
+      color: white;
+      text-decoration: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+      .sidebar {
+            width: 200px;
+            /* Adjust width for smaller screens */
+      }
+
+      .items {
+            padding: 15px 20px;
+            /* Adjust padding for smaller screens */
+      }
+}
