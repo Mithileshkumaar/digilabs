@@ -5,12 +5,14 @@
       color: white;
       padding-top: 20px;
       position: relative;
-      overflow-x: hidden;
+      overflow-x: 10px;
 
 }
 
+
+
 .items {
-      padding: 20px 30px;
+      padding: 20px 10px;
 }
 
 li:hover {

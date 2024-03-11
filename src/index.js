@@ -14,10 +14,10 @@ export default function App() {
 
 
 
-        <Route path="/" element={<Login />} />
-        <Route path="/dataupload" element={<DataUpload />} />
-        <Route path="/eventmanagement" element={<EventManagement />} />
-        <Route path="/college" element={<College />} />
+        <Route path="/" activeClassName="selected" element={<Login />} />
+        <Route path="/dataupload" activeClassName="selected" element={<DataUpload />} />
+        <Route path="/eventmanagement" activeClassName="selected" element={<EventManagement />} />
+        <Route path="/college" activeClassName="selected" element={<College />} />
 
 
 

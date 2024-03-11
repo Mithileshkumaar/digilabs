@@ -41,12 +41,12 @@ function DataUpload() {
       const [open, setOpen] = useState(false);
       const [tableContents, setTableContents] = useState([
             {
-                  College: 'College 1',
+                  College: 'Sample Students name 1',
                   students: 11,
                   import: 'Import File',
             },
             {
-                  College: 'College 2',
+                  College: 'Sample Students name 2',
                   students: 121,
                   import: 'Import File',
             }

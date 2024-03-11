@@ -7,6 +7,8 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
 import Modal from "../components/modal";
 import { IoMdClose } from "react-icons/io";
+import { GrMenu } from "react-icons/gr";
+import { IoCloseSharp } from "react-icons/io5";
 
 function EventManagement() {
       const [EventName, setEventName] = useState('');
@@ -16,6 +18,8 @@ function EventManagement() {
       const [place, setPlace] = useState('');
       const [error, setError] = useState('');
       const [open, setOpen] = useState(false);
+      // const [editMode, setEditMode] = useState(false);
+      // const [editIndex, setEditIndex] = useState(null);
       const [tableContents, setTableContents] = useState([
             {
                   EventName: 'sample 1',
@@ -33,6 +37,11 @@ function EventManagement() {
                   btn: 'btn'
             }
       ]);
+      const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+      const toggleSidebar = () => {
+            setIsSidebarOpen(!isSidebarOpen);
+      };
 
       const handleClose = () => {
             setOpen(false);
@@ -84,15 +93,58 @@ function EventManagement() {
                   setPlace('');
             }
       }
+      const handleDelete = (index) => {
+            const updatedTableContents = [...tableContents];
+            updatedTableContents.splice(index, 1);
+            setTableContents(updatedTableContents);
+      };
+      // const handleEdit = (index) => {
+      //       setEventName(tableContents[index].EventName);
+      //       setDate(tableContents[index].date);
+      //       setTime(tableContents[index].time);
+      //       setMode(tableContents[index].mode);
+      //       setPlace(tableContents[index].place);
+      //       setEditMode(true);
+      //       setEditIndex(index);
+      //       handleOpen(); // Open the modal for editing
+      // };
+      // const handleSaveEdit = () => {
+      //       const updatedTableContents = [...tableContents];
+      //       updatedTableContents[editIndex] = {
+      //             EventName,
+      //             date,
+      //             time,
+      //             mode,
+      //             place,
+      //       };
+      //       setTableContents(updatedTableContents);
+      //       handleClose();
+      //       setEventName('');
+      //       setDate('');
+      //       setTime('');
+      //       setMode('');
+      //       setPlace('');
+      //       setEditMode(false);
+      // };
 
       return (
             <div className="eventmanagement">
                   <Navbar />
+
                   <div className='content'>
-                        <div className='sidebar'>
-                              <Sidebar />
-                        </div>
-                        <div className='eventmanagement-content'>
+
+                        {isSidebarOpen && (
+                              <div className='sidebar'>
+                                    <Sidebar />
+                              </div>
+                        )}
+                        <button className="toggle-button" onClick={toggleSidebar} style={{ textAlign: 'start', height: '40px', border: 'none', backgroundColor: '#E4EBFF' }} >
+                              {isSidebarOpen ? <IoCloseSharp /> : <GrMenu />}
+
+                        </button>
+                        <div className='eventmanagement-content' style={{ paddingTop: '20px' }}
+                        >
+
                               <table>
                                     <thead>
                                           <tr className='heading'>
@@ -173,17 +225,31 @@ function EventManagement() {
                                                             <td style={{ width: '70px' }}>{item.time}</td>
                                                             <td style={{ width: '70px' }}>{item.mode}</td>
                                                             <td style={{ width: '70px' }}>{item.place}</td>
-                                                            <td style={{ display: 'flex' }}><button style={{ border: 'none' }}>  <TiPencil style={{ fontSize: '20px' }} /></button>
-                                                                  <button style={{ border: 'none' }}><RiDeleteBinLine style={{ fontSize: '20px' }} /></button>
+                                                            <td style={{ display: 'flex' }}>
+                                                                  <button style={{ border: 'none' }}
+                                                                  // onClick={() => handleEdit(index)}
+                                                                  >
+                                                                        <TiPencil style={{ fontSize: '20px' }} />
+                                                                  </button>
+                                                                  <button style={{ border: 'none' }} onClick={() => handleDelete(index)}>
+                                                                        <RiDeleteBinLine style={{ fontSize: '20px' }} />
+                                                                  </button>
                                                             </td>
-                                                            <td style={{ textAlign: 'end', paddingRight: "20px", }}><button style={{ border: 'none' }}><IoIosArrowForward /></button></td>
+                                                            <td style={{ textAlign: 'end', paddingRight: "20px", }}>
+                                                                  <button style={{ border: 'none' }}><IoIosArrowForward /></button>
+                                                            </td>
                                                       </tr>
                                                 </React.Fragment>
                                           ))}
                                     </tbody>
                               </table>
+                              <div className='pagination'>
+
+                              </div>
                         </div>
                   </div>
+
+
             </div>
       );
 }

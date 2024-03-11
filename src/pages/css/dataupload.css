@@ -8,6 +8,7 @@
       margin: 20px 20px;
       text-align: center;
       width: 100%;
+      overflow-x: auto;
 }
 
 th {
@@ -36,6 +37,9 @@ td {
 }
 
 table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #262626;
       box-shadow: 1px 1px 5px 1px rgb(162, 163, 163);
 }
 
@@ -48,18 +52,7 @@ table {
 @media only screen and (max-width: 768px) {
       .dataupload-content {
             margin: 10px;
-      }
+            overflow-x: 10px;
 
-      th,
-      td {
-            padding: 10px;
-      }
-
-      .heading {
-            padding: 15px;
-      }
-
-      .heading button {
-            margin: 5px;
       }
 }

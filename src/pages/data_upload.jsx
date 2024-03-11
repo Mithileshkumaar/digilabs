@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/navbar';
 import './css/dataupload.css';
+import { Link } from "react-router-dom";
 import Sidebar from '../components/sidebar';
 import { TiPencil } from "react-icons/ti";
 import { RiDeleteBinLine } from "react-icons/ri";
@@ -8,6 +9,8 @@ import { IoIosArrowForward } from "react-icons/io";
 import { RiExpandUpDownFill } from "react-icons/ri";
 import Modal from "../components/modal";
 import { IoMdClose } from "react-icons/io";
+import { GrMenu } from "react-icons/gr";
+import { IoCloseSharp } from "react-icons/io5";
 
 function DataUpload() {
       const [CollegeName, setCollegeName] = useState('');
@@ -26,6 +29,11 @@ function DataUpload() {
             }
             return true;
       }
+      const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+      const toggleSidebar = () => {
+            setIsSidebarOpen(!isSidebarOpen);
+      };
 
       function handleSaveCollege() {
             if (validate()) {
@@ -63,15 +71,29 @@ function DataUpload() {
             setCollegeName('');
             setStudents('');
       };
+      const handleDelete = (index) => {
+            const updatedTablecontent = [...tableContents]
+            updatedTablecontent.splice(index, 1);
+            setTableContents(updatedTablecontent)
 
+
+      }
       return (
             <div className="Dataupload">
                   <Navbar />
                   <div className='content'>
-                        <div className='sidebar'>
-                              <Sidebar />
-                        </div>
-                        <div className='dataupload-content'>
+                        {isSidebarOpen && (
+                              <div className='sidebar'>
+                                    <Sidebar />
+                              </div>
+
+                        )}
+                        <button className="toggle-button" onClick={toggleSidebar} style={{ textAlign: 'start', height: '40px', border: 'none', backgroundColor: '#E4EBFF' }} >
+                              {isSidebarOpen ? <IoCloseSharp /> : <GrMenu />}
+                        </button>
+                        <div className='dataupload-content' style={{ paddingTop: '20px' }}>
+
+
                               <table>
                                     <thead>
                                           <tr className='heading'>
@@ -118,14 +140,15 @@ function DataUpload() {
                                                                   <button style={{ border: 'none' }}>
                                                                         <TiPencil style={{ fontSize: '20px' }} />
                                                                   </button>
-                                                                  <button style={{ border: 'none' }}>
+                                                                  <button style={{ border: 'none' }} onClick={handleDelete}>
                                                                         <RiDeleteBinLine style={{ fontSize: '20px' }} />
                                                                   </button>
                                                             </td>
                                                             <td style={{ textAlign: 'end', paddingRight: "20px" }}>
-                                                                  <button style={{ border: 'none' }}>
+                                                                  <Link to="/college">  <button style={{ border: 'none' }}>
                                                                         <IoIosArrowForward />
                                                                   </button>
+                                                                  </Link>
                                                             </td>
                                                       </tr>
                                                 </React.Fragment>
