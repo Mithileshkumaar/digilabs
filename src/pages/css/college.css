@@ -1,5 +1,6 @@
 .content {
       display: flex;
+      flex-wrap: nowrap;
 }
 
 .college-content {
@@ -27,7 +28,7 @@ tr {
 .heading {
       background-color: #DDE2EB;
       color: #545454;
-      padding: 20px;
+
       width: 100%;
 }
 

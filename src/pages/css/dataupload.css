@@ -1,5 +1,7 @@
 .content {
       display: flex;
+      flex-wrap: wrap;
+      width: 100%;
 }
 
 .dataupload-content {
@@ -8,24 +10,19 @@
       width: 100%;
 }
 
-
-
 th {
       color: black;
       text-align: start;
       padding: 20px;
-
 }
 
 tr {
       background-color: #fff;
       text-align: start;
-
-
 }
 
 .heading {
-      background-color: #DDE2EB;
+      background-color: #dde2eb;
       color: #545454;
       padding: 20px;
 }
@@ -36,8 +33,6 @@ tr {
 
 td {
       padding: 5px 34px;
-
-
 }
 
 table {
@@ -48,4 +43,23 @@ table {
       display: flex;
       flex-direction: column;
       padding: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+      .dataupload-content {
+            margin: 10px;
+      }
+
+      th,
+      td {
+            padding: 10px;
+      }
+
+      .heading {
+            padding: 15px;
+      }
+
+      .heading button {
+            margin: 5px;
+      }
 }

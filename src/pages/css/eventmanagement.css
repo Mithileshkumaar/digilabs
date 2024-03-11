@@ -1,7 +1,7 @@
 .content {
       display: flex;
       width: 100%;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
 }
 
 .eventmanagement-content {
@@ -25,6 +25,7 @@ th {
       text-align: center;
       padding: 0px 24px;
 
+
 }
 
 table {
@@ -35,21 +36,20 @@ table {
 
 }
 
-tr {
+td {
       background-color: #fff;
+
+
+
 
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
       .eventmanagement-content {
             margin: 10px;
 
       }
 
-      th,
-      td {
-            padding: 5px;
 
-      }
 }

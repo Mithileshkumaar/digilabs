@@ -79,7 +79,7 @@ function DataUpload() {
                                                 <th>Students</th>
                                                 <th></th>
                                                 <th></th>
-                                                <th style={{ textAlign: 'end', padding: "0px 10px" }}>
+                                                <th style={{ textAlign: 'end', padding: "0px", display: 'flex', justifyContent: "flex-end" }}>
                                                       <button style={{ width: "120px" }}>Send Bulk Mail</button>
                                                       <button type="button" onClick={handleOpen} style={{ backgroundColor: '#4EC35D', color: 'white', border: 'none', width: "120px" }}>
                                                             Add College

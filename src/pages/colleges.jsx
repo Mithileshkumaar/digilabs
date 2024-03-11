@@ -6,8 +6,7 @@ import { TiPencil } from "react-icons/ti";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
 import { RiExpandUpDownFill } from "react-icons/ri";
-import Modal from "../components/modal";
-import { IoMdClose } from "react-icons/io";
+
 
 function DataUpload() {
       const [CollegeName, setCollegeName] = useState('');

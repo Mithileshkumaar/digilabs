@@ -102,7 +102,7 @@ function EventManagement() {
                                                 <th>Mode</th>
                                                 <th>Place</th>
                                                 <th></th>
-                                                <th style={{ textAlign: 'end', padding: "0px 10px" }}>
+                                                <th style={{ textAlign: 'end', padding: "0px 0px", display: 'flex', justifyContent: "flex-end" }}>
                                                       <button style={{ width: "120px" }}>Send Bulk Mail</button>
                                                       <button type="button" onClick={handleOpen} style={{ backgroundColor: '#4EC35D', color: 'white', border: 'none', width: "120px" }}>Add Event</button>
                                                       <Modal isOpen={open} >
@@ -167,13 +167,13 @@ function EventManagement() {
                                     <tbody>
                                           {tableContents.map((item, index) => (
                                                 <React.Fragment key={index}>
-                                                      <tr style={{ borderBottom: " 0.1px solid gray", textAlign: 'start' }}>
-                                                            <td>{item.EventName}</td>
-                                                            <td>{item.date}</td>
-                                                            <td>{item.time}</td>
-                                                            <td>{item.mode}</td>
-                                                            <td>{item.place}</td>
-                                                            <td><button style={{ border: 'none' }}>  <TiPencil style={{ fontSize: '20px' }} /></button>
+                                                      <tr style={{ borderBottom: " 0.1px solid gray", textAlign: 'start', }}>
+                                                            <td style={{ width: '70px' }}>{item.EventName}</td>
+                                                            <td style={{ width: '70px' }}>{item.date}</td>
+                                                            <td style={{ width: '70px' }}>{item.time}</td>
+                                                            <td style={{ width: '70px' }}>{item.mode}</td>
+                                                            <td style={{ width: '70px' }}>{item.place}</td>
+                                                            <td style={{ display: 'flex' }}><button style={{ border: 'none' }}>  <TiPencil style={{ fontSize: '20px' }} /></button>
                                                                   <button style={{ border: 'none' }}><RiDeleteBinLine style={{ fontSize: '20px' }} /></button>
                                                             </td>
                                                             <td style={{ textAlign: 'end', paddingRight: "20px", }}><button style={{ border: 'none' }}><IoIosArrowForward /></button></td>
