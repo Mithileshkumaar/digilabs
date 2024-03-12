@@ -4,10 +4,17 @@ import dlogo from '../assets/digilogo.png';
 import bell from '../assets/bell.png';
 import { MdFileDownload } from "react-icons/md";
 import { PiDotsNineBold } from "react-icons/pi";
+import { TfiPowerOff } from "react-icons/tfi";
+import { CgProfile } from "react-icons/cg";
+import { Link } from "react-router-dom";
+
 
 
 function Navbar() {
-
+      const [isMenuOPen, setIsMenuOpen] = useState(true);
+      const togglemenu = () => {
+            setIsMenuOpen(!isMenuOPen);
+      }
 
 
       return (
@@ -26,9 +33,26 @@ function Navbar() {
                               <img src={bell} alt="" style={{ marginTop: '10px', }} />
                         </div>
                         <div>
-                              <button style={{ border: 'none', }} >
+                              <button style={{ border: 'none', }} onClick={togglemenu}>
                                     <PiDotsNineBold style={{ fontSize: '30px' }} ></PiDotsNineBold>
+
                               </button>
+                              {isMenuOPen && (
+
+                                    <div className='menu' style={isMenuOPen ? { transform: 'translateX(0)' } : { transform: 'translateX(-100%)' }}>
+
+                                          <li>
+                                                <Link to='/' style={{ color: 'black' }}><span style={{ display: 'flex', paddingTop: '3px' }}> <div><CgProfile style={{ padding: '3px 10px 0px 10px' }} /> </div> <div>Profile</div></span>
+                                                </Link>
+                                          </li>
+                                          <hr />
+                                          <li>
+                                                <Link to='/' style={{ color: 'black' }}><span style={{ display: 'flex' }}> <div><TfiPowerOff style={{ padding: '3px 10px 0px 10px' }} /> </div> <div>Logout</div></span>
+                                                </Link>
+                                          </li>
+
+                                    </div>
+                              )}
                         </div>
                   </div>
 

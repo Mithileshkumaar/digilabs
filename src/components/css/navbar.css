@@ -27,3 +27,25 @@ button {
       gap: 10px;
 
 }
+
+.menu {
+      position: absolute;
+      top: 60px;
+      bottom: 10;
+
+      right: 50px;
+      background-color: white;
+      padding: 5px 1px;
+      box-shadow: 1px 1px 1px 1px gray;
+}
+
+.menu li {
+
+      width: 100px;
+      text-align: center;
+}
+
+.menu li:hover {
+
+      background-color: white;
+}

@@ -6,9 +6,14 @@
       padding-top: 20px;
       position: relative;
       overflow-x: 10px;
-
+      transform: translateX(0);
+      transition: transform 0.5s ease-in-out;
+      /* Updated transition for ease-in and out */
 }
 
+.sidebar-open {
+      /* transform: translate(-100%); */
+}
 
 
 .items {

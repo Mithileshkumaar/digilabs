@@ -37,11 +37,14 @@ function EventManagement() {
                   btn: 'btn'
             }
       ]);
+
       const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
       const toggleSidebar = () => {
             setIsSidebarOpen(!isSidebarOpen);
       };
+
+
 
       const handleClose = () => {
             setOpen(false);
@@ -134,13 +137,23 @@ function EventManagement() {
                   <div className='content'>
 
                         {isSidebarOpen && (
-                              <div className='sidebar'>
+
+                              <div className='sidebar' style={isSidebarOpen ? { transform: 'translateX(0)' } : { transform: 'translateX(-100%)' }}>
                                     <Sidebar />
                               </div>
                         )}
-                        <button className="toggle-button" onClick={toggleSidebar} style={{ textAlign: 'start', height: '40px', border: 'none', backgroundColor: '#E4EBFF' }} >
+                        <button
+                              className="toggle-button"
+                              onClick={toggleSidebar}
+                              style={{
+                                    textAlign: 'start',
+                                    height: '40px',
+                                    border: 'none',
+                                    backgroundColor: '#E4EBFF',
+                                    transition: 'transform 4s ease-in-out', // Apply transition inline
+                              }}
+                        >
                               {isSidebarOpen ? <IoCloseSharp /> : <GrMenu />}
-
                         </button>
                         <div className='eventmanagement-content' style={{ paddingTop: '20px' }}
                         >
