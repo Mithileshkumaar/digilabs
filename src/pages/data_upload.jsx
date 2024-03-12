@@ -91,13 +91,13 @@ function DataUpload() {
                         <button className="toggle-button" onClick={toggleSidebar} style={{ textAlign: 'start', height: '40px', border: 'none', backgroundColor: '#E4EBFF' }} >
                               {isSidebarOpen ? <IoCloseSharp /> : <GrMenu />}
                         </button>
-                        <div className='dataupload-content' style={{ paddingTop: '20px' }}>
+                        <div className='dataupload-content' style={{ paddingTop: '0px' }}>
 
 
                               <table>
                                     <thead>
                                           <tr className='heading'>
-                                                <th style={{ display: 'flex', paddingTop: "20px" }}> <span> <RiExpandUpDownFill /></span>College Name</th>
+                                                <th style={{ display: 'flex', paddingTop: "20px", gap: "5px" }}> <span> <RiExpandUpDownFill style={{ paddingTop: "4px" }} /></span>College Name</th>
                                                 <th>Students</th>
                                                 <th></th>
                                                 <th></th>

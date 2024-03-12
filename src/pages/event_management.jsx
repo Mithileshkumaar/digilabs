@@ -155,7 +155,7 @@ function EventManagement() {
                         >
                               {isSidebarOpen ? <IoCloseSharp /> : <GrMenu />}
                         </button>
-                        <div className='eventmanagement-content' style={{ paddingTop: '20px' }}
+                        <div className='eventmanagement-content' style={{ paddingTop: '0px' }}
                         >
 
                               <table>

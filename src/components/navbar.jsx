@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 
 function Navbar() {
-      const [isMenuOPen, setIsMenuOpen] = useState(true);
+      const [isMenuOPen, setIsMenuOpen] = useState(false);
       const togglemenu = () => {
             setIsMenuOpen(!isMenuOPen);
       }
@@ -20,15 +20,15 @@ function Navbar() {
       return (
             <div className="navbar">
                   <div className='flex-content' style={{ display: 'flex', gap: '30px' }}>
-                        <img src={dlogo} alt="" style={{ margin: '', height: '45px', }} />
+                        <img src={dlogo} alt="" style={{ margin: '', height: '45px', paddingTop: '10px', paddingLeft: '30px' }} />
                         <a href="../assets/logo.png" download>
-                              <button style={{ display: 'flex', paddingTop: "15px" }}>
-                                    <span> <MdFileDownload style={{ fontSize: '20px' }} /></span>Download Import Template
+                              <button style={{ display: 'flex', paddingTop: "15px", }}>
+                                    <span> <MdFileDownload style={{ fontSize: '20px', }} /></span>Download Import Template
                               </button>
                         </a>
                   </div>
 
-                  <div className='flex-content' style={{ display: 'flex', }}>
+                  <div className='flex-content' style={{ display: 'flex', paddingRight: '30px' }}>
                         <div>
                               <img src={bell} alt="" style={{ marginTop: '10px', }} />
                         </div>

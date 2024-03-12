@@ -6,6 +6,8 @@ import { TiPencil } from "react-icons/ti";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
 import { RiExpandUpDownFill } from "react-icons/ri";
+import { GrMenu } from "react-icons/gr";
+import { IoCloseSharp } from "react-icons/io5";
 
 
 function DataUpload() {
@@ -38,6 +40,12 @@ function DataUpload() {
             }
       }
 
+      const updatedTablecontent = (index) => {
+            const updatedTablecontent = [...tableContents]
+            updatedTablecontent.splice(index, 1);
+            setTableContents(updatedTablecontent)
+      }
+
       const [open, setOpen] = useState(false);
       const [tableContents, setTableContents] = useState([
             {
@@ -62,20 +70,33 @@ function DataUpload() {
             setCollegeName('');
             setStudents('');
       };
+      const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+      const toggleSidebar = () => {
+            setIsSidebarOpen(!isSidebarOpen);
+      };
 
       return (
             <div className="Dataupload">
                   <Navbar />
                   <div className='content'>
-                        <div className='sidebar'>
-                              <Sidebar />
-                        </div>
+                        {isSidebarOpen && (
+                              <div className='sidebar'>
+                                    <Sidebar />
+                              </div>
+
+                        )}
+                        <button className="toggle-button" onClick={toggleSidebar} style={{ textAlign: 'start', height: '40px', border: 'none', backgroundColor: '#E4EBFF' }} >
+                              {isSidebarOpen ? <IoCloseSharp /> : <GrMenu />}
+                        </button>
                         <div className='college-content'>
+                              <h2>REC</h2>
                               <table>
                                     <thead>
                                           <tr className='heading'>
 
-                                                <th>Students</th>
+                                                <th style={{ display: 'flex', paddingTop: "20px", gap: "5px" }}> <span> <RiExpandUpDownFill style={{ paddingTop: "4px" }} /></span>Student</th>
+
                                                 <th></th>
                                                 <th></th>
 
@@ -93,7 +114,7 @@ function DataUpload() {
                                                                         <TiPencil style={{ fontSize: '20px' }} />
                                                                   </button>
                                                                   <button style={{ border: 'none' }}>
-                                                                        <RiDeleteBinLine style={{ fontSize: '20px' }} />
+                                                                        <RiDeleteBinLine style={{ fontSize: '20px' }} onClick={updatedTablecontent} />
                                                                   </button>
                                                             </td>
                                                             <td style={{ textAlign: 'end', paddingRight: "20px" }}>
