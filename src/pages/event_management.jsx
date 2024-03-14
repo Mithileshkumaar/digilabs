@@ -37,7 +37,47 @@ function EventManagement() {
                   btn: 'btn'
             },
             {
-                  EventName: 'sample 2',
+                  EventName: 'sample 3',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 4',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 5',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 6',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 7',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 8',
                   date: '12-5-24',
                   time: '4 - 5 am',
                   mode: 'online',
@@ -53,7 +93,7 @@ function EventManagement() {
                   btn: 'btn'
             },
             {
-                  EventName: 'sample 2',
+                  EventName: 'sample 9',
                   date: '12-5-24',
                   time: '4 - 5 am',
                   mode: 'online',
@@ -61,47 +101,7 @@ function EventManagement() {
                   btn: 'btn'
             },
             {
-                  EventName: 'sample 2',
-                  date: '12-5-24',
-                  time: '4 - 5 am',
-                  mode: 'online',
-                  place: '',
-                  btn: 'btn'
-            },
-            {
-                  EventName: 'sample 2',
-                  date: '12-5-24',
-                  time: '4 - 5 am',
-                  mode: 'online',
-                  place: '',
-                  btn: 'btn'
-            },
-            {
-                  EventName: 'sample 2',
-                  date: '12-5-24',
-                  time: '4 - 5 am',
-                  mode: 'online',
-                  place: '',
-                  btn: 'btn'
-            },
-            {
-                  EventName: 'sample 2',
-                  date: '12-5-24',
-                  time: '4 - 5 am',
-                  mode: 'online',
-                  place: '',
-                  btn: 'btn'
-            },
-            {
-                  EventName: 'sample 2',
-                  date: '12-5-24',
-                  time: '4 - 5 am',
-                  mode: 'online',
-                  place: '',
-                  btn: 'btn'
-            },
-            {
-                  EventName: 'sample 2',
+                  EventName: 'sample 10',
                   date: '12-5-24',
                   time: '4 - 5 am',
                   mode: 'online',
@@ -145,7 +145,12 @@ function EventManagement() {
       function validateEvent() {
             if (!EventName.trim()) {
                   setError("Please enter the event name");
+
                   return false;
+            }
+            if (EventName.length < 3) {
+                  setError("Please enter an Event with 3 character ");
+                  return false
             }
             if (!date.trim()) {
                   setError("Please enter the date");
@@ -156,9 +161,10 @@ function EventManagement() {
                   return false;
             }
             if (!mode.trim()) {
-                  setError("Please enter the mode");
+                  setError("Please enter its online or offline mode");
                   return false;
             }
+
             if (!place.trim()) {
                   setError("Please enter the place");
                   setPlace('-')
@@ -291,13 +297,20 @@ function EventManagement() {
                                                                                           onChange={(e) => setTime(e.target.value)}
                                                                                     />
 
-                                                                                    <input type="text"
+
+                                                                                    <select name="cars" id="cars" value={mode} onChange={(e) => setMode(e.target.value)} style={{ border: 'solid gray', width: '422px', margin: '20px 30px', height: "50px", padding: '10px' }}>
+                                                                                          <option value="">Select Option</option>
+                                                                                          <option value="Online">Online</option>
+                                                                                          <option value="Offline">Offline</option>
+
+                                                                                    </select>
+                                                                                    {/* <input type="text"
                                                                                           name="" id="mode"
                                                                                           placeholder='Enter Mode'
                                                                                           style={{ border: 'solid gray', width: '400px', margin: '20px 30px' }}
                                                                                           value={mode}
                                                                                           onChange={(e) => setMode(e.target.value)}
-                                                                                    />
+                                                                                    /> */}
 
                                                                                     <input type="text"
                                                                                           name="" id="place"

@@ -58,47 +58,47 @@ function DataUpload() {
 
             },
             {
-                  College: 'Sample Students name 2',
+                  College: 'Sample Students name 3',
 
             },
             {
-                  College: 'Sample Students name 2',
+                  College: 'Sample Students name 4',
 
             },
             {
-                  College: 'Sample Students name 2',
+                  College: 'Sample Students name 5',
 
             },
             {
-                  College: 'Sample Students name 2',
+                  College: 'Sample Students name 6',
 
             },
             {
-                  College: 'Sample Students name 2',
+                  College: 'Sample Students name 7',
 
             },
             {
-                  College: 'Sample Students name 2',
+                  College: 'Sample Students name 8',
 
             },
             {
-                  College: 'Sample Students name 2',
+                  College: 'Sample Students name 9',
 
             },
             {
-                  College: 'Sample Students name 2',
+                  College: 'Sample Students name 10',
 
             },
             {
-                  College: 'Sample Students name 2',
+                  College: 'Sample Students name 11',
 
             },
             {
-                  College: 'Sample Students name 2',
+                  College: 'Sample Students name 12',
 
             },
             {
-                  College: 'Sample Students name 2',
+                  College: 'Sample Students name 13',
 
             },
             {

@@ -52,7 +52,7 @@ function DataUpload() {
       const [tableContents, setTableContents] = useState([
             {
                   College: 'College 1',
-                  students: 100,
+                  students: 0,
                   import: 'Import File',
             },
             {
@@ -168,9 +168,11 @@ function DataUpload() {
                                                                         <button style={{ border: 'none' }}>
                                                                               <TiPencil style={{ fontSize: '20px' }} className='btn' />
                                                                         </button>
-                                                                        <button style={{ border: 'none' }} onClick={handleDelete}>
+
+                                                                        <button style={{ border: 'none' }} onClick={() => handleDelete(index)}>
                                                                               <RiDeleteBinLine style={{ fontSize: '20px' }} className='btn' />
                                                                         </button>
+
                                                                   </td>
                                                                   <td style={{ textAlign: 'end', paddingRight: "20px" }}>
                                                                         <Link to="/college">  <button style={{ border: 'none' }}>
