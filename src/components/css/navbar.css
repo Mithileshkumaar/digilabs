@@ -32,12 +32,11 @@ button {
 .menu {
       position: absolute;
       top: 60px;
-      bottom: 10;
-
       right: 50px;
       background-color: white;
       padding: 5px 1px;
       box-shadow: 1px 1px 1px 1px rgb(155, 154, 154);
+      z-index: 999;
 
 }
 
@@ -50,4 +49,9 @@ button {
 .menu li:hover {
 
       background-color: white;
+}
+
+
+.btn {
+      cursor: pointer;
 }

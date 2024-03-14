@@ -35,6 +35,94 @@ function EventManagement() {
                   mode: 'online',
                   place: '',
                   btn: 'btn'
+            },
+            {
+                  EventName: 'sample 2',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 2',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 2',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 2',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 2',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 2',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 2',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 2',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 2',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 2',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
+            },
+            {
+                  EventName: 'sample 2',
+                  date: '12-5-24',
+                  time: '4 - 5 am',
+                  mode: 'online',
+                  place: '',
+                  btn: 'btn'
             }
       ]);
 
@@ -73,6 +161,8 @@ function EventManagement() {
             }
             if (!place.trim()) {
                   setError("Please enter the place");
+                  setPlace('-')
+
                   return false;
             }
             return true;
@@ -157,105 +247,106 @@ function EventManagement() {
                         </button>
                         <div className='eventmanagement-content' style={{ paddingTop: '0px' }}
                         >
+                              <div className='table-container'>
+                                    <table>
+                                          <thead>
+                                                <tr className='heading' style={{ position: 'sticky', top: '0' }}>
+                                                      <th>Event Name</th>
+                                                      <th>Date</th>
+                                                      <th>Time</th>
+                                                      <th>Mode</th>
+                                                      <th>Place</th>
+                                                      <th></th>
+                                                      <th style={{ textAlign: 'end', padding: "0px 0px", display: 'flex', justifyContent: "flex-end" }}>
+                                                            <button style={{ width: "120px" }} className='btn'>Send Bulk Mail</button>
+                                                            <button type="button" className='btn' onClick={handleOpen} style={{ backgroundColor: '#4EC35D', color: 'white', border: 'none', width: "120px" }}>Add Event</button>
+                                                            <Modal isOpen={open} >
+                                                                  <>
+                                                                        <div className='modal'>
+                                                                              <div style={{ backgroundColor: '#A3D9E8', width: '100%', textAlign: "start", display: 'flex', justifyContent: 'space-between' }}><h4 style={{ padding: '0px 30px', }}>Add Event</h4><button onClick={handleClose} style={{ border: 'none', backgroundColor: '#A3D9E8' }}><IoMdClose fontSize={'20px'} /></button></div>
+                                                                              <div style={{ padding: '0px 10px', display: 'flex', flexDirection: 'column' }}>
 
-                              <table>
-                                    <thead>
-                                          <tr className='heading'>
-                                                <th>Event Name</th>
-                                                <th>Date</th>
-                                                <th>Time</th>
-                                                <th>Mode</th>
-                                                <th>Place</th>
-                                                <th></th>
-                                                <th style={{ textAlign: 'end', padding: "0px 0px", display: 'flex', justifyContent: "flex-end" }}>
-                                                      <button style={{ width: "120px" }}>Send Bulk Mail</button>
-                                                      <button type="button" onClick={handleOpen} style={{ backgroundColor: '#4EC35D', color: 'white', border: 'none', width: "120px" }}>Add Event</button>
-                                                      <Modal isOpen={open} >
-                                                            <>
-                                                                  <div className='modal'>
-                                                                        <div style={{ backgroundColor: '#A3D9E8', width: '100%', textAlign: "start", display: 'flex', justifyContent: 'space-between' }}><h4 style={{ padding: '0px 30px', }}>Add Event</h4><button onClick={handleClose} style={{ border: 'none', backgroundColor: '#A3D9E8' }}><IoMdClose fontSize={'20px'} /></button></div>
-                                                                        <div style={{ padding: '0px 10px', display: 'flex', flexDirection: 'column' }}>
+                                                                                    <h5 style={{ width: '100%', textAlign: "start", padding: '0px 30px' }}>Event Name</h5>
+                                                                                    <input type="text"
+                                                                                          name="" id="eventName"
+                                                                                          placeholder='Enter Event Name'
+                                                                                          style={{ border: 'solid gray', width: '400px', margin: '10px 30px' }}
+                                                                                          value={EventName}
+                                                                                          onChange={(e) => setEventName(e.target.value)}
+                                                                                    />
 
-                                                                              <h5 style={{ width: '100%', textAlign: "start", padding: '0px 30px' }}>Event Name</h5>
-                                                                              <input type="text"
-                                                                                    name="" id="eventName"
-                                                                                    placeholder='Enter Event Name'
-                                                                                    style={{ border: 'solid gray', width: '400px', margin: '10px 30px' }}
-                                                                                    value={EventName}
-                                                                                    onChange={(e) => setEventName(e.target.value)}
-                                                                              />
+                                                                                    <input type="date"
+                                                                                          name=""
+                                                                                          id="date" placeholder=''
+                                                                                          style={{ border: 'solid gray', width: '400px', margin: '10px 30px' }}
+                                                                                          value={date}
+                                                                                          onChange={(e) => setDate(e.target.value)}
+                                                                                    />
 
-                                                                              <input type="date"
-                                                                                    name=""
-                                                                                    id="date" placeholder=''
-                                                                                    style={{ border: 'solid gray', width: '400px', margin: '10px 30px' }}
-                                                                                    value={date}
-                                                                                    onChange={(e) => setDate(e.target.value)}
-                                                                              />
+                                                                                    <input type="time"
+                                                                                          name=""
+                                                                                          id="time" placeholder=''
+                                                                                          style={{ border: 'solid gray', width: '400px', margin: '10px 30px' }}
+                                                                                          value={time}
+                                                                                          onChange={(e) => setTime(e.target.value)}
+                                                                                    />
 
-                                                                              <input type="time"
-                                                                                    name=""
-                                                                                    id="time" placeholder=''
-                                                                                    style={{ border: 'solid gray', width: '400px', margin: '10px 30px' }}
-                                                                                    value={time}
-                                                                                    onChange={(e) => setTime(e.target.value)}
-                                                                              />
+                                                                                    <input type="text"
+                                                                                          name="" id="mode"
+                                                                                          placeholder='Enter Mode'
+                                                                                          style={{ border: 'solid gray', width: '400px', margin: '20px 30px' }}
+                                                                                          value={mode}
+                                                                                          onChange={(e) => setMode(e.target.value)}
+                                                                                    />
 
-                                                                              <input type="text"
-                                                                                    name="" id="mode"
-                                                                                    placeholder='Enter Mode'
-                                                                                    style={{ border: 'solid gray', width: '400px', margin: '20px 30px' }}
-                                                                                    value={mode}
-                                                                                    onChange={(e) => setMode(e.target.value)}
-                                                                              />
+                                                                                    <input type="text"
+                                                                                          name="" id="place"
+                                                                                          placeholder='Enter Place'
+                                                                                          style={{ border: 'solid gray', width: '400px', margin: '10px 30px' }}
+                                                                                          value={place}
+                                                                                          onChange={(e) => setPlace(e.target.value)}
+                                                                                    />
 
-                                                                              <input type="text"
-                                                                                    name="" id="place"
-                                                                                    placeholder='Enter Place'
-                                                                                    style={{ border: 'solid gray', width: '400px', margin: '10px 30px' }}
-                                                                                    value={place}
-                                                                                    onChange={(e) => setPlace(e.target.value)}
-                                                                              />
-
-                                                                              <div style={{ textAlign: 'center', padding: '15px 10px 0px 10px' }}>
-                                                                                    {error && <p style={{ color: 'black' }}>{error}</p>}
-                                                                                    <button style={{ border: 'solid gray', width: "80px" }} onClick={handleClose} >cancel</button>
-                                                                                    <button style={{ backgroundColor: '#374260', color: 'white', border: 'none', width: "80px" }} onClick={handleSubmit}>Save</button>
+                                                                                    <div style={{ textAlign: 'center', padding: '15px 10px 0px 10px' }}>
+                                                                                          {error && <p style={{ color: 'black' }}>{error}</p>}
+                                                                                          <button style={{ border: 'solid gray', width: "80px" }} onClick={handleClose} >cancel</button>
+                                                                                          <button style={{ backgroundColor: '#374260', color: 'white', border: 'none', width: "80px" }} onClick={handleSubmit}>Save</button>
+                                                                                    </div>
                                                                               </div>
                                                                         </div>
-                                                                  </div>
-                                                            </>
-                                                      </Modal>
-                                                </th>
-                                          </tr>
-                                    </thead>
-                                    <tbody>
-                                          {tableContents.map((item, index) => (
-                                                <React.Fragment key={index}>
-                                                      <tr style={{ borderBottom: " 0.1px solid gray", textAlign: 'start', }}>
-                                                            <td style={{ width: '70px' }}>{item.EventName}</td>
-                                                            <td style={{ width: '70px' }}>{item.date}</td>
-                                                            <td style={{ width: '70px' }}>{item.time}</td>
-                                                            <td style={{ width: '70px' }}>{item.mode}</td>
-                                                            <td style={{ width: '70px' }}>{item.place}</td>
-                                                            <td style={{ display: 'flex' }}>
-                                                                  <button style={{ border: 'none' }}
-                                                                  // onClick={() => handleEdit(index)}
-                                                                  >
-                                                                        <TiPencil style={{ fontSize: '20px' }} />
-                                                                  </button>
-                                                                  <button style={{ border: 'none' }} onClick={() => handleDelete(index)}>
-                                                                        <RiDeleteBinLine style={{ fontSize: '20px' }} />
-                                                                  </button>
-                                                            </td>
-                                                            <td style={{ textAlign: 'end', paddingRight: "20px", }}>
-                                                                  <button style={{ border: 'none' }}><IoIosArrowForward /></button>
-                                                            </td>
-                                                      </tr>
-                                                </React.Fragment>
-                                          ))}
-                                    </tbody>
-                              </table>
+                                                                  </>
+                                                            </Modal>
+                                                      </th>
+                                                </tr>
+                                          </thead>
+                                          <tbody>
+                                                {tableContents.map((item, index) => (
+                                                      <React.Fragment key={index}>
+                                                            <tr style={{ borderBottom: " 0.1px solid gray", textAlign: 'start', }}>
+                                                                  <td style={{ width: '70px' }}>{item.EventName}</td>
+                                                                  <td style={{ width: '70px' }}>{item.date}</td>
+                                                                  <td style={{ width: '70px' }}>{item.time}</td>
+                                                                  <td style={{ width: '70px' }}>{item.mode}</td>
+                                                                  <td style={{ width: '70px' }}>{item.place}</td>
+                                                                  <td style={{ display: 'flex' }}>
+                                                                        <button style={{ border: 'none' }}
+                                                                        // onClick={() => handleEdit(index)}
+                                                                        >
+                                                                              <TiPencil style={{ fontSize: '20px' }} className='btn' />
+                                                                        </button>
+                                                                        <button style={{ border: 'none' }} onClick={() => handleDelete(index)}>
+                                                                              <RiDeleteBinLine style={{ fontSize: '20px' }} className='btn' />
+                                                                        </button>
+                                                                  </td>
+                                                                  <td style={{ textAlign: 'end', paddingRight: "20px", }}>
+                                                                        <button style={{ border: 'none' }}><IoIosArrowForward className='btn' /></button>
+                                                                  </td>
+                                                            </tr>
+                                                      </React.Fragment>
+                                                ))}
+                                          </tbody>
+                                    </table>
+                              </div>
                               <div className='pagination'>
 
                               </div>

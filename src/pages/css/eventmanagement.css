@@ -2,6 +2,7 @@
       display: flex;
       width: 100%;
       flex-wrap: wrap;
+
 }
 
 .eventmanagement-content {
@@ -27,6 +28,12 @@ th {
       padding: 0px 24px;
 }
 
+.table-container {
+      max-height: 500px;
+
+
+}
+
 table {
       width: 100%;
       border-collapse: collapse;
@@ -34,10 +41,15 @@ table {
       box-shadow: 1px 1px 5px 1px rgb(162, 163, 163);
 
 
+
 }
 
 td {
       background-color: #fff;
+}
+
+.btn {
+      cursor: pointer;
 }
 
 @media only screen and (max-width: 768px) {

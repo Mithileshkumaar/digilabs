@@ -26,6 +26,10 @@ tr {
 
 }
 
+.btn {
+      cursor: pointer
+}
+
 .heading {
       background-color: #DDE2EB;
       color: #545454;

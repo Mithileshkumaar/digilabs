@@ -20,9 +20,11 @@ function Navbar() {
       return (
             <div className="navbar">
                   <div className='flex-content' style={{ display: 'flex', gap: '30px' }}>
-                        <img src={dlogo} alt="" style={{ margin: '', height: '45px', paddingTop: '10px', paddingLeft: '30px' }} />
-                        <a href="../assets/logo.png" download>
-                              <button style={{ display: 'flex', paddingTop: "15px", }}>
+                        <Link to='/'>
+                              <img src={dlogo} alt="" style={{ margin: '', height: '45px', paddingTop: '10px', paddingLeft: '30px' }} />
+                        </Link>
+                        <a href="../assets/logo.png" download >
+                              <button style={{ display: 'flex', paddingTop: "15px", }} className="btn">
                                     <span> <MdFileDownload style={{ fontSize: '20px', }} /></span>Download Import Template
                               </button>
                         </a>
@@ -30,11 +32,11 @@ function Navbar() {
 
                   <div className='flex-content' style={{ display: 'flex', paddingRight: '30px' }}>
                         <div>
-                              <img src={bell} alt="" style={{ marginTop: '10px', }} />
+                              <img src={bell} alt="" style={{ marginTop: '10px', }} className="btn" />
                         </div>
                         <div>
                               <button style={{ border: 'none', }} onClick={togglemenu}>
-                                    <PiDotsNineBold style={{ fontSize: '30px' }} ></PiDotsNineBold>
+                                    <PiDotsNineBold style={{ fontSize: '30px' }} className="btn" ></PiDotsNineBold>
 
                               </button>
                               {isMenuOPen && (

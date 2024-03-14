@@ -28,6 +28,10 @@ tr {
       padding: 20px;
 }
 
+.btn {
+      cursor: pointer;
+}
+
 .heading button {
       margin: 10px 10px;
 }
@@ -36,11 +40,20 @@ td {
       padding: 5px 34px;
 }
 
+.table-container {
+      max-height: 500px;
+
+      overflow-y: auto;
+
+}
+
 table {
       width: 100%;
       border-collapse: collapse;
       color: #262626;
       box-shadow: 1px 1px 5px 1px rgb(162, 163, 163);
+
+      /* Remove overflow-y from the table */
 }
 
 .modal {

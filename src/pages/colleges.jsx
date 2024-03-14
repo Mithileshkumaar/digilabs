@@ -3,11 +3,11 @@ import Navbar from '../components/navbar';
 import './css/college.css';
 import Sidebar from '../components/sidebar';
 import { TiPencil } from "react-icons/ti";
-import { RiDeleteBinLine } from "react-icons/ri";
+import { RiDeleteBinLine, RiExpandUpDownFill } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
-import { RiExpandUpDownFill } from "react-icons/ri";
 import { GrMenu } from "react-icons/gr";
 import { IoCloseSharp } from "react-icons/io5";
+import '../components/css/pagination.css'
 
 
 function DataUpload() {
@@ -50,13 +50,84 @@ function DataUpload() {
       const [tableContents, setTableContents] = useState([
             {
                   College: 'Sample Students name 1',
-                  students: 11,
-                  import: 'Import File',
+
+
             },
             {
                   College: 'Sample Students name 2',
-                  students: 121,
-                  import: 'Import File',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
+            },
+            {
+                  College: 'Sample Students name 2',
+
             }
       ]);
 
@@ -91,43 +162,72 @@ function DataUpload() {
                         </button>
                         <div className='college-content'>
                               <h2>REC</h2>
-                              <table>
-                                    <thead>
-                                          <tr className='heading'>
+                              <div className="table-container">
+                                    <table>
+                                          <thead>
+                                                <tr className='heading' style={{ position: 'sticky', top: '0' }}>
 
-                                                <th style={{ display: 'flex', paddingTop: "20px", gap: "5px" }}> <span> <RiExpandUpDownFill style={{ paddingTop: "4px" }} /></span>Student</th>
+                                                      <th style={{ display: 'flex', paddingTop: "20px", gap: "5px" }}> <span> <RiExpandUpDownFill style={{ paddingTop: "4px" }} /></span>Student</th>
 
-                                                <th></th>
-                                                <th></th>
+                                                      <th></th>
+                                                      <th></th>
 
 
-                                          </tr>
-                                    </thead>
-                                    <tbody>
-                                          {tableContents.map((item, index) => (
-                                                <React.Fragment key={index}>
-                                                      <tr style={{ borderBottom: " 0.1px solid gray" }}>
-                                                            <td>{item.College}</td>
+                                                </tr>
+                                          </thead>
+                                          <tbody>
+                                                {tableContents.map((item, index) => (
+                                                      <React.Fragment key={index}>
+                                                            <tr style={{ borderBottom: " 0.1px solid gray" }}>
+                                                                  <td>{item.College}</td>
 
-                                                            <td>
-                                                                  <button style={{ border: 'none' }}>
-                                                                        <TiPencil style={{ fontSize: '20px' }} />
-                                                                  </button>
-                                                                  <button style={{ border: 'none' }}>
-                                                                        <RiDeleteBinLine style={{ fontSize: '20px' }} onClick={updatedTablecontent} />
-                                                                  </button>
-                                                            </td>
-                                                            <td style={{ textAlign: 'end', paddingRight: "20px" }}>
-                                                                  <button style={{ border: 'none' }}>
-                                                                        <IoIosArrowForward />
-                                                                  </button>
-                                                            </td>
-                                                      </tr>
-                                                </React.Fragment>
-                                          ))}
-                                    </tbody>
-                              </table>
+                                                                  <td>
+                                                                        <button style={{ border: 'none' }}>
+                                                                              <TiPencil style={{ fontSize: '20px' }} className='btn' />
+                                                                        </button>
+                                                                        <button style={{ border: 'none' }}>
+                                                                              <RiDeleteBinLine style={{ fontSize: '20px' }} onClick={updatedTablecontent} className='btn' />
+                                                                        </button>
+                                                                  </td>
+
+                                                                  <td style={{ textAlign: 'end', paddingRight: "20px" }}>
+                                                                        <button style={{ border: 'none' }}>
+                                                                              <IoIosArrowForward className='btn' />
+                                                                        </button>
+                                                                  </td>
+
+                                                            </tr>
+                                                      </React.Fragment>
+                                                ))}
+                                          </tbody>
+                                    </table>
+                              </div>
+                              {/* <div className="pagination">
+                                    <div>Total Records: {tableContents.length}</div>
+                                    <div style={{ display: 'flex', padding: '0px 20px' }}>
+                                          <div style={{ display: 'flex', }}>
+                                                rows to display:
+                                                <div className="custom-select" style={{ width: "20px", paddingLeft: '20px' }}>
+                                                      <select>
+                                                            <option value="0">Select:</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">6</option>
+
+                                                      </select>
+                                                </div>
+                                          </div>
+                                          <div>
+                                                paging
+                                          </div>
+                                    </div>
+
+                              </div> */}
                         </div>
+
                   </div>
             </div>
       );
